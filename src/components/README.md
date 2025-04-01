@@ -6,6 +6,8 @@
 > Composants graphique fonctionnellement neutres et réutilisables.
 Dans le dosseirs "components"
 
+> npx generate-react-cli component BaseButton
+
 * BaseButton
 * BaseFooter
 * BaseMain

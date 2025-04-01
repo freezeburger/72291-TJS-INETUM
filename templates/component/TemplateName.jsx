@@ -9,7 +9,7 @@ import './TemplateName.style.css';
  * <TemplateName /> 
  */
 const TemplateName = ({propName = 'DefaultPropValue'}) => (
-  <div className={TemplateName} data-testid="TemplateName">
+  <div className="TemplateName" data-testid="TemplateName">
     TemplateName Component
   </div>
 );
