@@ -1,0 +1,57 @@
+{
+  "usesTypeScript": false,
+  "usesStyledComponents": false,
+  "usesCssModule": false,
+  "cssPreprocessor": "css",
+  "testLibrary": "Testing Library",
+  "component": {
+    "default": {
+      "path": "src/components",
+      "withStyle": true,
+      "withTest": true,
+      "withStory": true,
+      "withLazy": false,
+      "withIndex": false,
+      "customTemplates": {
+        "index": "templates/default/index.js",
+        "component": "templates/component/TemplateName.jsx",
+        "lazy": "templates/component/TemplateName.lazy.jsx",
+        "story": "templates/component/TemplateName.story.jsx",
+        "style": "templates/component/TemplateName.style.css",
+        "test": "templates/component/TemplateName.test.jsx"
+      }
+    },
+    "view": {
+      "path": "src/views",
+      "withStyle": true,
+      "withTest": false,
+      "withStory": false,
+      "withLazy": true,
+      "withIndex": true,
+      "customTemplates": {
+        "index": "templates/default/index.js",
+        "component": "templates/component/TemplateName.jsx",
+        "lazy": "templates/component/TemplateName.lazy.jsx",
+        "story": "templates/component/TemplateName.story.jsx",
+        "style": "templates/component/TemplateName.style.css",
+        "test": "templates/component/TemplateName.test.jsx"
+      }
+    },
+    "container": {
+      "path": "src/containers",
+      "withStyle": true,
+      "withTest": true,
+      "withStory": false,
+      "withLazy": true,
+      "withIndex": true,
+      "customTemplates": {
+        "index": "templates/default/index.js",
+        "component": "templates/component/TemplateName.jsx",
+        "lazy": "templates/component/TemplateName.lazy.jsx",
+        "story": "templates/component/TemplateName.story.jsx",
+        "style": "templates/component/TemplateName.style.css",
+        "test": "templates/component/TemplateName.test.jsx"
+      }
+    }
+  }
+}
