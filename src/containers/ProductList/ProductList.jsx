@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import './ProductList.style.css';
 import { BaseProductItem } from '../../components';
+import { useStore } from '../../store';
 
 
 /**
@@ -9,12 +10,17 @@ import { BaseProductItem } from '../../components';
  * @example
  * <ProductList /> 
  */
-const ProductList = ({propName = 'DefaultPropValue'}) => (
-  <div className="ProductList" data-testid="ProductList">
-    ProductList Component
-    <BaseProductItem />
-  </div>
-);
+const ProductList = ({ propName = 'DefaultPropValue' }) => {
+
+  const { state, dispatch } = useStore();
+  return (
+    <div className="ProductList" data-testid="ProductList">
+      <h3>ProductList</h3>
+      <p>{JSON.stringify(state)}</p>
+      <BaseProductItem />
+    </div>
+  )
+};
 
 ProductList.propTypes = {
   propName: PropTypes.string,
