@@ -17,11 +17,14 @@ const ProductList = ({ propName = 'DefaultPropValue' }) => {
   return (
     <div className="ProductList" data-testid="ProductList">
       <h3>ProductList</h3>
+      
       <BaseButton
         onClick={() => dispatch({ type: ActionTypes.FETCH_PRODUCTS_REQUEST })}>
         Load Data
       </BaseButton>
+
       <p>{JSON.stringify(state)}</p>
+
       <BaseProductItem />
     </div>
   )
