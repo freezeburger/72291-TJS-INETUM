@@ -12,8 +12,11 @@ import styled from '@emotion/styled';
  */
 const LoginForm = ({ propName = 'DefaultPropValue' }) => {
 
+  const [email,setEmail] = React.useState('');
+  const [password,setPassword] = React.useState('');
+
   const handleClick = () => {
-    console.log('Button clicked!');
+    console.log('Button clicked!', email, password);
   }
 
   return (
@@ -22,8 +25,14 @@ const LoginForm = ({ propName = 'DefaultPropValue' }) => {
       <Title>FURNISH</Title>
       <SubTitle>Furniture Shop App</SubTitle>
 
-      <Input placeholder="Email"/>
-      <Input  placeholder="Password"/>
+      <Input 
+        placeholder="Email" 
+        onChange={ e => setEmail(e.target.value)}/>
+      <Text>{email}</Text>
+      <Input  
+        placeholder="Password" 
+        onChange={ e => setPassword(e.target.value)}/>
+      <Text>{password}</Text>
       <BaseButton onClick={handleClick} > LOGIN </BaseButton>
 
       <Text>Don't have an account yet ?</Text>
