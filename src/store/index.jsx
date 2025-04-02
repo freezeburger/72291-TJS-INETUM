@@ -1,4 +1,5 @@
 import { configureStore } from '@reduxjs/toolkit';
+import { useEffect, useState } from 'react';
 
 const initialState = {
     products: [],
@@ -35,3 +36,12 @@ const store = configureStore({
     name:'ProductStore'
 });
 
+
+export const useStore = () => {
+
+    const [state, setState] = useState(store.getState());
+    
+    useEffect(() => store.subscribe(()=> setState(store.getState()) ), []);
+
+    return { state, dispatch:store.dispatch };
+}
