@@ -1,5 +1,5 @@
 export {default as BaseButton} from './BaseButton/BaseButton';
-export {default as BaseCategorySelector} from './BaseCategorySelector/BaseCategorySelector';
+export {default as BaseCategoryItem} from './BaseCategoryItem/BaseCategoryItem';
 export {default as BaseColorSelector} from './BaseColorSelector/BaseColorSelector';
 export {default as BaseFooter} from './BaseFooter/BaseFooter';
 export {default as BaseHeader} from './BaseHeader/BaseHeader';
