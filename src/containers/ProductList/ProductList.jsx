@@ -23,9 +23,14 @@ const ProductList = ({ propName = 'DefaultPropValue' }) => {
         Load Data
       </BaseButton>
 
-      <p>{JSON.stringify(state)}</p>
+      {state.products.map((product) => (
+        <BaseProductItem
+          key={product.id}
+          product={product}
+        />
+      ))}
 
-      <BaseProductItem />
+
     </div>
   )
 };
