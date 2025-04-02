@@ -11,6 +11,7 @@ import './ProductCard.style.css';
 const ProductCard = ({propName = 'DefaultPropValue'}) => (
   <div className="ProductCard" data-testid="ProductCard">
     ProductCard Component
+
   </div>
 );
 

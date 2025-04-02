@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import './ViewLogin.style.css';
+import LoginForm from '../../containers/LoginForm';
 
 
 /**
@@ -11,6 +12,7 @@ import './ViewLogin.style.css';
 const ViewLogin = ({propName = 'DefaultPropValue'}) => (
   <div className="ViewLogin" data-testid="ViewLogin">
     ViewLogin Component
+    <LoginForm />
   </div>
 );
 

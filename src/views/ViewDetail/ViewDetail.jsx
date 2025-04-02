@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import './ViewDetail.style.css';
+import ProductCard from '../../containers/ProductCard';
 
 
 /**
@@ -11,6 +12,7 @@ import './ViewDetail.style.css';
 const ViewDetail = ({propName = 'DefaultPropValue'}) => (
   <div className="ViewDetail" data-testid="ViewDetail">
     ViewDetail Component
+    <ProductCard />
   </div>
 );
 

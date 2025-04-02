@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import './LoginForm.style.css';
-
+import { BaseButton } from '../../components';
 
 /**
  * USAGE: LoginForm description to complete.
@@ -11,6 +11,7 @@ import './LoginForm.style.css';
 const LoginForm = ({propName = 'DefaultPropValue'}) => (
   <div className="LoginForm" data-testid="LoginForm">
     LoginForm Component
+    <BaseButton />
   </div>
 );
 
