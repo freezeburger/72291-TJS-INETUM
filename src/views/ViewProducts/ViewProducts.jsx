@@ -18,6 +18,7 @@ const ViewProducts = ({propName = 'DefaultPropValue'}) => (
   </div>
 );
 
+
 ViewProducts.propTypes = {
   propName: PropTypes.string,
 };

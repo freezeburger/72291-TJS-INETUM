@@ -9,4 +9,4 @@ const ViewProducts = props => (
 );
 
 export default ViewProducts;
-ViewProducts.displayName = 'ViewProducts';
+ViewProducts.displayName = 'ViewProductsLazy';
