@@ -16,7 +16,9 @@ const ViewLogin = ({propName = 'DefaultPropValue'}) => (
     className="ViewLogin" 
     data-testid="ViewLogin" 
     style={{backgroundColor: '#ff3390', padding:'0'}}>
-    <HeaderImage src="https://placeholderimage.eu/api/furniture/800/600" alt="Header Image" />
+
+    <HeaderImage src="https://placeholderimage.eu/api/800/600" alt="Header Image" />
+
     <LoginForm />
   </BaseMain>
 );
@@ -29,6 +31,7 @@ const HeaderImage = styled.img`
   position: absolute;
   top:0;
 `
+HeaderImage.displayName = 'HeaderImage';
 
 ViewLogin.propTypes = {
   propName: PropTypes.string,
