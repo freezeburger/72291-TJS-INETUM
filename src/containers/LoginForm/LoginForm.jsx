@@ -9,11 +9,16 @@ import { BaseButton } from '../../components';
  * <LoginForm /> 
  */
 const LoginForm = ({ propName = 'DefaultPropValue' }) => {
+
+  const handleClick = () => {
+    console.log('Button clicked!');
+  }
+
   return (
     <div className="LoginForm" data-testid="LoginForm">
       LoginForm Component
 
-      <BaseButton> LOGIN </BaseButton>
+      <BaseButton onClick={handleClick} > LOGIN </BaseButton>
 
     </div>
   );

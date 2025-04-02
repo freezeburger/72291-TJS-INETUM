@@ -9,9 +9,14 @@ import './BaseButton.style.css';
  * @example
  * <BaseButton> Content </BaseButton>
  */
-const BaseButton = ({children = 'DefaultPropValue'}) =>{ 
+const BaseButton = ({disabled, onClick, children = 'DefaultPropValue'}) =>{ 
   return (
-    <button style={styles} className="BaseButton" data-testid="BaseButton">
+    <button 
+      onClick={onClick} 
+      disabled={disabled} 
+      style={styles} 
+      className="BaseButton" 
+      data-testid="BaseButton">
       {children}
     </button>
   );
@@ -27,7 +32,9 @@ const styles = {
 }
 
 BaseButton.propTypes = {
+  disabled: PropTypes.bool,
   children: PropTypes.string,
+  onClick: PropTypes.func.isRequired,
 };
 
 export default BaseButton;
