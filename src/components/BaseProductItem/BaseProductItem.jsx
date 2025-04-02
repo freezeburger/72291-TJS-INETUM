@@ -10,9 +10,8 @@ import './BaseProductItem.style.css';
  */
 const BaseProductItem = ({product}) => (
   <div className="BaseProductItem" data-testid="BaseProductItem">
-    <img src={product.image} alt={product.name} />
-    <h4>{product.name}</h4>
-    <p>{product.description}</p>
+    <img src={product.thumbnail} alt={product.title} />
+    <h4>{product.title}</h4>
     <p>{product.price} €</p>
   </div>
 );
