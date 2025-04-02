@@ -8,9 +8,12 @@ import './BaseProductItem.style.css';
  * @example
  * <BaseProductItem /> 
  */
-const BaseProductItem = ({propName = 'DefaultPropValue'}) => (
+const BaseProductItem = ({product}) => (
   <div className="BaseProductItem" data-testid="BaseProductItem">
-    BaseProductItem Component
+    <img src={product.image} alt={product.name} />
+    <h4>{product.name}</h4>
+    <p>{product.description}</p>
+    <p>{product.price} €</p>
   </div>
 );
 
