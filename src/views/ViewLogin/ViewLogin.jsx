@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import './ViewLogin.style.css';
 import LoginForm from '../../containers/LoginForm';
+import { BaseMain } from '../../components';
 
 
 /**
@@ -10,10 +11,10 @@ import LoginForm from '../../containers/LoginForm';
  * <ViewLogin /> 
  */
 const ViewLogin = ({propName = 'DefaultPropValue'}) => (
-  <div className="ViewLogin" data-testid="ViewLogin">
+  <BaseMain className="ViewLogin" data-testid="ViewLogin">
     ViewLogin Component
     <LoginForm />
-  </div>
+  </BaseMain>
 );
 
 ViewLogin.propTypes = {
