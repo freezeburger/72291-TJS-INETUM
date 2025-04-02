@@ -1,8 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import './ProductList.style.css';
-import { BaseProductItem } from '../../components';
-import { useStore } from '../../store';
+import { BaseButton, BaseProductItem } from '../../components';
+import { ActionTypes, useStore } from '../../store';
 
 
 /**
@@ -13,9 +13,14 @@ import { useStore } from '../../store';
 const ProductList = ({ propName = 'DefaultPropValue' }) => {
 
   const { state, dispatch } = useStore();
+
   return (
     <div className="ProductList" data-testid="ProductList">
       <h3>ProductList</h3>
+      <BaseButton
+        onClick={() => dispatch({ type: ActionTypes.FETCH_PRODUCTS_REQUEST })}>
+        Load Data
+      </BaseButton>
       <p>{JSON.stringify(state)}</p>
       <BaseProductItem />
     </div>
