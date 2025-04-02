@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import './ProductList.style.css';
+import { BaseProductItem } from '../../components';
 
 
 /**
@@ -11,6 +12,7 @@ import './ProductList.style.css';
 const ProductList = ({propName = 'DefaultPropValue'}) => (
   <div className="ProductList" data-testid="ProductList">
     ProductList Component
+    <BaseProductItem />
   </div>
 );
 

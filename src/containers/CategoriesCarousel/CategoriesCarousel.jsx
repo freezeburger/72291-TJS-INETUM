@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import './CategoriesCarousel.style.css';
+import { BaseCategoryItem } from '../../components';
 
 
 
@@ -12,7 +13,7 @@ import './CategoriesCarousel.style.css';
 const CategoriesCarousel = ({propName = 'DefaultPropValue'}) => (
   <div className="CategoriesCarousel" data-testid="CategoriesCarousel">
     CategoriesCarousel Component
-
+    <BaseCategoryItem />
   </div>
 );
 
