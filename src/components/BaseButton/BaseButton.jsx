@@ -10,10 +10,19 @@ import './BaseButton.style.css';
  * <BaseButton /> 
  */
 const BaseButton = ({propName = 'DefaultPropValue'}) => (
-  <div className="BaseButton" data-testid="BaseButton">
+  <button style={styles} className="BaseButton" data-testid="BaseButton">
     BaseButton Component
-  </div>
+  </button>
 );
+
+const styles = {
+    backgroundColor: "orange",
+    color: 'white',
+    padding: '10px 20px',
+    border: 'none',
+    borderRadius: "5px",
+    cursor: 'pointer'
+}
 
 BaseButton.propTypes = {
   propName: PropTypes.string,

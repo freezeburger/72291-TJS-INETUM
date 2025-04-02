@@ -25,6 +25,9 @@ Dans le dosseirs "components"
 > Composants fonctionnels spécifiques.
 Dans le dossier "containers"
 
+> npx generate-react-cli component LoginForm ProductList 
+CategoriesCarousel ProductCard --type=container   
+
 * LoginForm
 * ProductList
 * CategoriesCarousel
@@ -34,6 +37,8 @@ Dans le dossier "containers"
 
 > Ensemble de présentation de fonctionanlités (écran).
 Dans le dossier "views"
+
+> npx generate-react-cli component LoginForm ViewLogin ViewProducts ViewDetail --type=view 
 
 * ViewLogin
 * ViewProducts
