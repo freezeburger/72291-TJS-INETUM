@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import './ProductCard.style.css';
+import { BaseButton, BaseColorSelector, BaseQuantitySelector } from '../../components';
 
 
 /**
@@ -11,7 +12,9 @@ import './ProductCard.style.css';
 const ProductCard = ({propName = 'DefaultPropValue'}) => (
   <div className="ProductCard" data-testid="ProductCard">
     ProductCard Component
-
+    <BaseQuantitySelector />
+    <BaseColorSelector />
+    <BaseButton />
   </div>
 );
 
