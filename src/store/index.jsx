@@ -1,8 +1,10 @@
+import { configureStore } from '@reduxjs/toolkit';
+
 const initialState = {
-  products:[],
-  orders:[],
-  cart:[],
-  user: null,
+    products: [],
+    orders: [],
+    cart: [],
+    user: null,
 }
 
 /* Transformer l'état de valeurs (Synchrone)*/
@@ -24,3 +26,12 @@ export const ActionTypes = {
     FETCH_PRODUCTS_REQUEST: 'FETCH_PRODUCTS_REQUEST',
     FETCH_PRODUCTS_UPDATE: 'FETCH_PRODUCTS_UPDATE',
 }
+
+
+const store = configureStore({
+    initialState,
+    reducer,
+    middleware: () => [middleware],
+    name:'ProductStore'
+});
+
