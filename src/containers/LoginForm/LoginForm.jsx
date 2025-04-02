@@ -53,6 +53,10 @@ const Card = styled.div`
   border-radius: 10px;
   background-color: white;
   border-top: 15px solid purple;
+  z-index: 1;
+  position: absolute;
+  bottom:50px;
+  min-width: 60vw;
 `
 
 const Title = styled.h1`
