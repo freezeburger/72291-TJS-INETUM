@@ -17,18 +17,20 @@ const ProductList = ({ propName = 'DefaultPropValue' }) => {
   return (
     <div className="ProductList" data-testid="ProductList">
       <h3>ProductList</h3>
-      
+
       <BaseButton
         onClick={() => dispatch({ type: ActionTypes.FETCH_PRODUCTS_REQUEST })}>
         Load Data
       </BaseButton>
 
-      {state.products.map((product) => (
-        <BaseProductItem
-          key={product.id}
-          product={product}
-        />
-      ))}
+      {
+        state.products.map((product) => (
+          <BaseProductItem
+            key={product.id}
+            product={product}
+          />
+        ))
+      }
 
 
     </div>
