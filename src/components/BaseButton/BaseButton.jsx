@@ -7,13 +7,15 @@ import './BaseButton.style.css';
 /**
  * USAGE: BaseButton description to complete.
  * @example
- * <BaseButton /> 
+ * <BaseButton> Content </BaseButton>
  */
-const BaseButton = ({propName = 'DefaultPropValue'}) => (
-  <button style={styles} className="BaseButton" data-testid="BaseButton">
-    BaseButton Component
-  </button>
-);
+const BaseButton = ({children = 'DefaultPropValue'}) =>{ 
+  return (
+    <button style={styles} className="BaseButton" data-testid="BaseButton">
+      {children}
+    </button>
+  );
+}
 
 const styles = {
     backgroundColor: "orange",
@@ -25,7 +27,7 @@ const styles = {
 }
 
 BaseButton.propTypes = {
-  propName: PropTypes.string,
+  children: PropTypes.string,
 };
 
 export default BaseButton;

@@ -8,12 +8,16 @@ import { BaseButton } from '../../components';
  * @example
  * <LoginForm /> 
  */
-const LoginForm = ({propName = 'DefaultPropValue'}) => (
-  <div className="LoginForm" data-testid="LoginForm">
-    LoginForm Component
-    <BaseButton />
-  </div>
-);
+const LoginForm = ({ propName = 'DefaultPropValue' }) => {
+  return (
+    <div className="LoginForm" data-testid="LoginForm">
+      LoginForm Component
+
+      <BaseButton> LOGIN </BaseButton>
+
+    </div>
+  );
+}
 
 LoginForm.propTypes = {
   propName: PropTypes.string,
