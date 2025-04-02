@@ -12,7 +12,6 @@ import { BaseMain } from '../../components';
  */
 const ViewLogin = ({propName = 'DefaultPropValue'}) => (
   <BaseMain className="ViewLogin" data-testid="ViewLogin">
-    ViewLogin Component
     <LoginForm />
   </BaseMain>
 );

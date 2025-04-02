@@ -17,38 +17,77 @@ const LoginForm = ({ propName = 'DefaultPropValue' }) => {
   }
 
   return (
-    <div className="LoginForm" data-testid="LoginForm">
-      FURNISH
-      Furniture Shop App
+    <Card className="LoginForm" data-testid="LoginForm">
 
-      <input type="text" />
-      <input type="text" />
+      <Title>FURNISH</Title>
+      <SubTitle>Furniture Shop App</SubTitle>
+
+      <Input placeholder="Email"/>
+      <Input  placeholder="Password"/>
       <BaseButton onClick={handleClick} > LOGIN </BaseButton>
 
-      Don't have an account yet ?
-      Create an account.
+      <Text>Don't have an account yet ?</Text>
+      <Link>Create an account.</Link>
       `
-    </div>
+    </Card>
   );
 }
 
+
+const Card = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0 20%;
+  padding: 20px;
+  border-radius: 10px;
+  background-color: white;
+  border-top: 15px solid purple;
+`
+
 const Title = styled.h1`
-  
+  text-align: left;
+  width: 100%;
+  margin:0;
+  padding: 0;
+  font-size: 1.8rem;
 `
 
 const SubTitle = styled.h2`
-  
-`
-const Text = styled.p`
-  
+  text-align: left;
+  width: 100%;
+  color:gray;
+  margin:0;
+  margin-bottom: 20px;
+  padding: 0;
+  font-size: 1.2rem;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 100;
 `
 
 const Input = styled.input`
-  
+  margin: 10px 0;
+  border-radius: 5px;
+  border: 1px solid lightgray;
+  font-size: 1rem;
+  color:gray;
+  background-color: lightgray;
+  height: 30px;
+  padding: 3px 10px;
 `
 
-const Link = styled.a`
+const Text = styled.p`
+  font-size: 0.8rem;
+   font-weight: 100;
+   margin-bottom:0;
+`
 
+
+
+const Link = styled.a`
+font-size: 0.8rem;
+  font-weight: bold;
 `
 
 LoginForm.propTypes = {
