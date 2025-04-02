@@ -10,13 +10,30 @@ const initialState = {
 
 /* Transformer l'état de valeurs (Synchrone)*/
 const reducer = (state = initialState, action) => {
-    return state;
+    switch (action.type) {
+        case ActionTypes.LOGIN_SUCCESS:
+            return { ...state, user: action.payload };
+        case ActionTypes.LOGIN_FAILURE:
+            return { ...state, user: null };
+        case ActionTypes.LOGOUT:
+            return { ...state, user: null };
+        case ActionTypes.FETCH_PRODUCTS_UPDATE:
+            return { ...state, products: action.payload };
+        default:
+            return state;
+    }
 }
 
 /* Prépare le travail du reducer (Asynchrone) */
-const middleware = (store) => (next) => (action) => {
+const middleware = (store) => (next) => async (action) => {
     console.log('Middleware:', action);
-    return next(action);
+    next(action);
+
+    if(action.type === ActionTypes.FETCH_PRODUCTS_REQUEST){
+        const data = await fetch('http://localhost:5050/products').then(res => res.json());
+        store.dispatch({ type: ActionTypes.FETCH_PRODUCTS_UPDATE, payload: data });
+    }
+
 }
 
 export const ActionTypes = {
